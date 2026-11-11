@@ -17,7 +17,7 @@ const cases=[
 ];
 const names=['Risco inerente','Risco de controle','Risco de detecção'];
 const slides=[{type:'cover'},...concepts.map(c=>({type:'concept',c}))];
-for(const c of cases){slides.push({type:'case',c});for(let i=0;i<3;i++)slides.push({type:'question',c,i,id:`${cases.indexOf(c)}-${i}`}));}
+for(const c of cases){slides.push({type:'case',c});for(let i=0;i<3;i++)slides.push({type:'question',c,i,id:`${cases.indexOf(c)}-${i}`});}
 slides.push({type:'end'});
 let at=0;let answers={};const screen=document.getElementById('screen');
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));}
